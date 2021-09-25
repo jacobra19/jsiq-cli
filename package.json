@@ -1,0 +1,16 @@
+{
+    "name": "javascript-interview-questions-cli",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cli-markdown": "^1.7.1",
+        "node-fetch": "^3.0.0"
+    },
+    "type": "module"
+}
