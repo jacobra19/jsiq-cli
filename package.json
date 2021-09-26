@@ -10,8 +10,10 @@
     "license": "ISC",
     "dependencies": {
         "cli-markdown": "^1.7.1",
+        "cli-spinners": "^2.6.0",
         "inquirer": "^8.1.5",
-        "node-fetch": "^3.0.0"
+        "node-fetch": "^3.0.0",
+        "ora": "^6.0.1"
     },
     "type": "module"
 }
