@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import cliSpinners from 'cli-spinners'
 import ora from 'ora';
 
