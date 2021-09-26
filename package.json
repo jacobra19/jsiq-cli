@@ -10,6 +10,7 @@
     "license": "ISC",
     "dependencies": {
         "cli-markdown": "^1.7.1",
+        "inquirer": "^8.1.5",
         "node-fetch": "^3.0.0"
     },
     "type": "module"
