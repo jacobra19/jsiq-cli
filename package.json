@@ -1,14 +1,13 @@
 {
-    "name": "javascript-interview-questions-cli",
-    "version": "0.1.0",
+    "name": "jsiq-cli",
+    "version": "0.1.1",
     "description": "An interactive NodeJS CLI for exercising question from https://github.com/sudheerj/javascript-interview-questions repository",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
-        "jsiq-cli": "index.js",
-        "javascript-interview-questions-cli": "index.js"
+        "jsiq-cli": "index.js"
     },
     "author": "Yakov Rakhamimov",
     "license": "MIT",
