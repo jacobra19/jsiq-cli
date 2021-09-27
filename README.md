@@ -1,5 +1,5 @@
 # jsiq-cli (javascript-interview-questions-cli)
-## An interactive NodeJS CLI for exercising javascript interview questions in the terminal
+## An interactive NodeJS CLI for exercising JavaScript interview questions in the terminal
 
 
 <img src="https://github.com/jacobra19/jsiq-cli/blob/main/demo.gif?raw=true" alt="jsiq-cli" title="jsiq-cli" width="100%"/>
