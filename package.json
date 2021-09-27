@@ -1,6 +1,6 @@
 {
     "name": "jsiq-cli",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "An interactive NodeJS CLI for exercising question from https://github.com/sudheerj/javascript-interview-questions repository",
     "main": "index.js",
     "scripts": {
