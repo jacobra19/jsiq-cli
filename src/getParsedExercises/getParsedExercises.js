@@ -4,7 +4,6 @@ const getParsedExercises = async (README_URL) => {
     const readme = await getFile(README_URL);
     const exercisesStrs = getExercisesStrs(readme);
     const exercises = exercisesStrs.map(parseExercise).filter(Boolean);
-    exercises.splice(3);
     return exercises;
 };
 
