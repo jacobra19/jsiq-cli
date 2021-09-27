@@ -2,7 +2,7 @@
 ## An interactive NodeJS CLI for exercising javascript interview questions in the terminal
 
 
-<img src="./demo.gif" alt="nba-daily" title="nba-daily" width="100%"/>
+<img src="https://github.com/jacobra19/jsiq-cli/blob/main/demo.gif?raw=true" alt="jsiq-cli" title="jsiq-cli" width="100%"/>
 
 ## Usage
 
