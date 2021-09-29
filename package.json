@@ -18,5 +18,13 @@
         "node-fetch": "^3.0.0",
         "ora": "^6.0.1"
     },
-    "type": "module"
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jacobra19/jsiq-cli.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jacobra19/jsiq-cli/issues"
+    },
+    "homepage": "https://github.com/jacobra19/jsiq-cli#readme"
 }
