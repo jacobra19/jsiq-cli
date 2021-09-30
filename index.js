@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import cliSpinners from 'cli-spinners'
+import cliSpinners from 'cli-spinners';
 import ora from 'ora';
 
 import {
@@ -8,17 +8,20 @@ import {
     handleExerciseQuestionnaire,
 } from './src/index.js';
 
-const README_URL =
+const README_URL_sudheerj =
     'https://raw.githubusercontent.com/sudheerj/javascript-interview-questions/master/README.md';
+
+const README_URL_lydiahallie =
+    'https://raw.githubusercontent.com/lydiahallie/javascript-questions/master/README.md';
 
 const run = async () => {
     const spinner = ora({
         text: 'Fetching README.md',
         spinner: cliSpinners.dots,
     });
-    spinner.start()
-    const exercises = await getParsedExercises(README_URL);
-    spinner.stop()
+    spinner.start();
+    const exercises = await getParsedExercises(README_URL_sudheerj);
+    spinner.stop();
     let currentExerciseIndex = 0;
     let shouldContinue = await handleExerciseQuestionnaire(
         exercises[currentExerciseIndex]

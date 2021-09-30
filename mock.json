@@ -34,12 +34,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\nThe statements order is based on the event loop mechanism. The order of statements follows the below order,\n\n1. At first, the main function is pushed to the stack.\n2. Then the browser pushes the fist statement of the main function( i.e, A's console.log) to the stack, executing and popping out immediately.\n3. But `setTimeout` statement moved to Browser API to apply the delay for callback.\n4. In the meantime, C's console.log added to stack, executed and popped out.\n5. The callback of `setTimeout` moved from Browser API to message queue.\n6. The `main` function popped out from stack because there are no statements to execute\n7. The callback moved from message queue to the stack since the stack is empty.\n8. The console.log for B is added to the stack and display on the console.\n\n</p>\n"
         },
-        "options": [
-            "A, B and C",
-            "B, A and C",
-            "A and C",
-            "A, C and B"
-        ]
+        "options": ["A, B and C", "B, A and C", "A and C", "A, C and B"]
     },
     {
         "question": " 4. What is the output of below equality check",
@@ -48,10 +43,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n\nThis is due to the float point math problem. Since the floating point numbers are encoded in binary format, the addition operations on them lead to rounding errors. Hence, the comparison of floating points doesn't give expected results.\nYou can find more details about the explanation here [0.30000000000000004.com/](https://0.30000000000000004.com/)\n\n</p>\n"
         },
-        "options": [
-            "false",
-            "true"
-        ]
+        "options": ["false", "true"]
     },
     {
         "question": " 5. What is the output of below code",
@@ -60,12 +52,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\nThe main points in the above code snippets are,\n\n1. You can see function expression instead function declaration inside if statement. So it always returns true.\n2. Since it is not declared(or assigned) anywhere, f is undefined and typeof f is undefined too.\n\nIn other words, it is same as\n\n```javascript\nvar y = 1;\n  if ('foo') {\n    y += typeof f;\n  }\n  console.log(y);\n```\n\n**Note:** It returns 1object for MS Edge browser\n</p>\n"
         },
-        "options": [
-            "1function",
-            "1object",
-            "ReferenceError",
-            "1undefined"
-        ]
+        "options": ["1function", "1object", "ReferenceError", "1undefined"]
     },
     {
         "question": " 6. What is the output of below code",
@@ -186,10 +173,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nIn order to be consistent with functions like `String.prototype.padStart`, the standard method name for trimming the whitespaces is considered as `trimStart`. Due to web web compatibility reasons, the old method name 'trimLeft' still acts as an alias for 'trimStart'. Hence, the prototype for 'trimLeft' is always 'trimStart'\n</p>\n"
         },
-        "options": [
-            "True, False",
-            "False, True"
-        ]
+        "options": ["True, False", "False, True"]
     },
     {
         "question": " 15. What is the output of below code",
@@ -198,12 +182,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\n-Infinity is the initial comparant because almost every other value is bigger. So when no arguments are provided, -Infinity is going to be returned.\n**Note:** Zero number of arguments is a valid case.\n</p>\n"
         },
-        "options": [
-            "undefined",
-            "Infinity",
-            "0",
-            "-Infinity"
-        ]
+        "options": ["undefined", "Infinity", "0", "-Infinity"]
     },
     {
         "question": " 16. What is the output of below code",
@@ -212,12 +191,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\nAs per the comparison algorithm in the ECMAScript specification(ECMA-262), the above expression converted into JS as below\n```javascript\n10 === Number([10].valueOf().toString()) // 10\n```\nSo it doesn't matter about number brackets([]) around the number, it is always converted to a number in the expression.\n</p>\n"
         },
-        "options": [
-            "True, True",
-            "True, False",
-            "False, False",
-            "False, True"
-        ]
+        "options": ["True, True", "True, False", "False, False", "False, True"]
     },
     {
         "question": " 17. What is the output of below code",
@@ -226,12 +200,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nThe concatenation operator(+) is applicable for both number and string types. So if any operand is string type then both operands concatenated as strings. Whereas subtract(-) operator tries to convert the operands as number type.\n</p>\n"
         },
-        "options": [
-            "20, 0",
-            "1010, 0",
-            "1010, 10-10",
-            "NaN, NaN"
-        ]
+        "options": ["20, 0", "1010, 0", "1010, 10-10", "NaN, NaN"]
     },
     {
         "question": " 18. What is the output of below code",
@@ -268,10 +237,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nJavaScript follows IEEE 754 spec standards. As per this spec, NaNs are never equal for floating-point numbers.\n</p>\n"
         },
-        "options": [
-            "True",
-            "False"
-        ]
+        "options": ["True", "False"]
     },
     {
         "question": " 22. What is the output of below code",
@@ -280,12 +246,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\nThe `indexOf` uses strict equality operator(===) internally and `NaN === NaN` evaluates to false. Since indexOf won't be able to find NaN inside an array, it returns -1 always.\nBut you can use `Array.prototype.findIndex` method to find out the index of NaN in an array or You can use `Array.prototype.includes` to check if NaN is present in an array or not.\n\n```javascript\nlet numbers = [1, 2, 3, 4, NaN];\nconsole.log(numbers.findIndex(Number.isNaN)); // 4\n\nconsole.log(numbers.includes(NaN)); // true\n```\n\n</p>\n"
         },
-        "options": [
-            "4",
-            "NaN",
-            "SyntaxError",
-            "-1"
-        ]
+        "options": ["4", "NaN", "SyntaxError", "-1"]
     },
     {
         "question": " 23. What is the output of below code",
@@ -336,12 +297,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n\nEven though “processArray” is an async function, the anonymous function that we use for `forEach` is synchronous. If you use await inside a synchronous function then it throws a syntax error.\n</p>\n\n"
         },
-        "options": [
-            "SyntaxError",
-            "1, 2, 3, 4",
-            "4, 4, 4, 4",
-            "4, 3, 2, 1"
-        ]
+        "options": ["SyntaxError", "1, 2, 3, 4", "4, 4, 4, 4", "4, 3, 2, 1"]
     },
     {
         "question": " 28. What is the output of below code",
@@ -378,12 +334,7 @@
             "index": 3,
             "full": "\n<p>\n\n##### Answer: 3\n\nSymbol follows below conventions,\n\n1. Every symbol value returned from Symbol() is unique irrespective of the optional string.\n2. `Symbol.for()` function creates a symbol in a global symbol registry list. But it doesn't  necessarily create a new symbol on every call, it checks first if a symbol with the given key is already present in the registry and returns the symbol if it is found. Otherwise a new symbol created in the registry.\n\n**Note:** The symbol description is just useful for debugging purposes.\n</p>\n\n"
         },
-        "options": [
-            "true, true",
-            "true, false",
-            "false, true",
-            "false, false"
-        ]
+        "options": ["true, true", "true, false", "false, true", "false, false"]
     },
     {
         "question": " 31. What is the output of below code",
@@ -392,12 +343,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n\n`Symbol` is a just a standard function and not an object constructor(unlike other primitives new Boolean, new String and new Number). So if you try to call it with the new operator will result in a TypeError\n</p>\n\n"
         },
-        "options": [
-            "SyntaxError",
-            "one",
-            "Symbol('one')",
-            "Symbol"
-        ]
+        "options": ["SyntaxError", "one", "Symbol('one')", "Symbol"]
     },
     {
         "question": " 32. What is the output of below code",
@@ -434,10 +380,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nUsing constructors, `new.target` refers to the constructor (points to the class definition of class which is initialized) that was directly invoked by new. This also applies to the case if the constructor is in a parent class and was delegated from a child constructor.\n</p>\n\n"
         },
-        "options": [
-            "A, A",
-            "A, B"
-        ]
+        "options": ["A, A", "A, B"]
     },
     {
         "question": " 35. What is the output of below code",
@@ -446,12 +389,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\nIt throws a syntax error because the rest element should not have a trailing comma. You should always consider using a rest operator as the last element.\n</p>\n\n"
         },
-        "options": [
-            "1, [2, 3, 4]",
-            "1, [2, 3]",
-            "1, [2]",
-            "SyntaxError"
-        ]
+        "options": ["1, [2, 3, 4]", "1, [2, 3]", "1, [2]", "SyntaxError"]
     },
     {
         "question": " 36. What is the output of below code",
@@ -460,12 +398,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n\nThe object property follows below rules,\n\n1. The object properties can be retrieved and assigned to a variable with a different name\n2. The property assigned a default value when the retrieved value is `undefined`\n\n</p>\n\n"
         },
-        "options": [
-            "30, 20",
-            "10, 20",
-            "10, undefined",
-            "30, undefined"
-        ]
+        "options": ["30, 20", "10, 20", "10, undefined", "30, undefined"]
     },
     {
         "question": " 37. What is the output of below code",
@@ -474,12 +407,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nIf you leave out the right-hand side assignment for the destructuring object, the function will look for at least one argument to be supplied when invoked. Otherwise you will receive an error `Error: Cannot read property 'length' of undefined` as mentioned above.\n\nYou can avoid the error with either of the below changes,\n\n1. **Pass at least an empty object:**\n\n```javascript\nfunction area({length = 10, width = 20}) {\n  console.log(length*width);\n}\n\narea({});\n```\n\n2. **Assign default empty object:**\n\n```javascript\nfunction area({length = 10, width = 20} = {}) {\n  console.log(length*width);\n}\n\narea();\n```\n\n</p>\n\n"
         },
-        "options": [
-            "200",
-            "Error",
-            "undefined",
-            "0"
-        ]
+        "options": ["200", "Error", "undefined", "0"]
     },
     {
         "question": " 38. What is the output of below code",
@@ -488,12 +416,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n\nIt is possible to combine Array and Object destructuring. In this case, the third element in the array props accessed first followed by name property in the object.\n</p>\n\n"
         },
-        "options": [
-            "Tom",
-            "Error",
-            "undefined",
-            "John"
-        ]
+        "options": ["Tom", "Error", "undefined", "John"]
     },
     {
         "question": " 39. What is the output of below code",
@@ -516,10 +439,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nSince the default argument is evaluated at call time, a new object is created each time the function is called. So in this case, the new array is created and an element pushed to the default empty array.\n\n</p>\n\n"
         },
-        "options": [
-            "['Orange'], ['Orange', 'Apple']",
-            "['Orange'], ['Apple']"
-        ]
+        "options": ["['Orange'], ['Orange', 'Apple']", "['Orange'], ['Apple']"]
     },
     {
         "question": " 41. What is the output of below code",
@@ -540,10 +460,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n\nThe functions and variables declared in the function body cannot be referred from default value parameter initializers. If you still try to access, it throws a run-time ReferenceError(i.e, `inner` is not defined).\n</p>\n\n"
         },
-        "options": [
-            "ReferenceError",
-            "Inner"
-        ]
+        "options": ["ReferenceError", "Inner"]
     },
     {
         "question": " 43. What is the output of below code",
@@ -566,12 +483,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nSpread syntax can be applied only to iterable objects. By default, Objects are not iterable, but they become iterable when used in an Array, or with iterating functions such as `map(), reduce(), and assign()`. If you still try to do it, it still throws `TypeError: obj is not iterable`.\n</p>\n\n"
         },
-        "options": [
-            "['key', 'value']",
-            "TypeError",
-            "[]",
-            "['key']"
-        ]
+        "options": ["['key', 'value']", "TypeError", "[]", "['key']"]
     },
     {
         "question": " 45. What is the output of below code",
@@ -580,12 +492,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\nGenerators are not constructible type. But if you still proceed to do, there will be an error saying \"TypeError: myGenFunc is not a constructor\"\n\n</p>\n\n"
         },
-        "options": [
-            "1",
-            "undefined",
-            "SyntaxError",
-            "TypeError"
-        ]
+        "options": ["1", "undefined", "SyntaxError", "TypeError"]
     },
     {
         "question": " 46. What is the output of below code",
@@ -608,12 +515,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\n\nThe generator should not be re-used once the iterator is closed. i.e, Upon exiting a loop(on completion or using break & return), the generator is closed and trying to iterate over it again does not yield any more results. Hence, the second loop doesn't print any value.\n</p>\n\n"
         },
-        "options": [
-            "1,2,3 and 1,2,3",
-            "1,2,3 and 4,5,6",
-            "1 and 1",
-            "1"
-        ]
+        "options": ["1,2,3 and 1,2,3", "1,2,3 and 4,5,6", "1 and 1", "1"]
     },
     {
         "question": " 48. What is the output of below code",
@@ -622,10 +524,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\nIf you use an invalid number(outside of 0-7 range) in the octal literal, JavaScript will throw a SyntaxError. In ES5, it treats the octal literal as a decimal number.\n</p>\n\n"
         },
-        "options": [
-            "SyntaxError",
-            "38"
-        ]
+        "options": ["SyntaxError", "38"]
     },
     {
         "question": " 49. What is the output of below code",
@@ -634,10 +533,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nUnlike function declarations, class declarations are not hoisted. i.e, First You need to declare your class and then access it, otherwise it will throw a ReferenceError \"Uncaught ReferenceError: Square is not defined\".\n\n**Note:** Class expressions also applies to the same hoisting restrictions of class declarations.\n</p>\n\n"
         },
-        "options": [
-            "100",
-            "ReferenceError"
-        ]
+        "options": ["100", "ReferenceError"]
     },
     {
         "question": " 50. What is the output of below code",
@@ -674,12 +570,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\n\nEven though we used constant variables, the content of it is an object and the object's contents (e.g properties) can be altered. Hence, the change is going to be valid in this case.\n</p>\n\n"
         },
-        "options": [
-            "30",
-            "25",
-            "Uncaught TypeError",
-            "SyntaxError"
-        ]
+        "options": ["30", "25", "Uncaught TypeError", "SyntaxError"]
     },
     {
         "question": " 53. What is the output of below code",
@@ -688,10 +579,7 @@
             "index": 2,
             "full": "\n<p>\n\n##### Answer: 2\nEmojis are unicodes and the unicode for smile symbol is \"U+1F642\". The unicode comparision of same emojies is equivalent to string comparison. Hence, the output is always true.\n\n</p>\n\n"
         },
-        "options": [
-            "false",
-            "true"
-        ]
+        "options": ["false", "true"]
     },
     {
         "question": " 54. What is the output of below code?",
@@ -700,12 +588,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\nThe typeof operator on any primitive returns a string value. So even if you apply the chain of typeof operators on the return value, it is always string.\n</p>\n\n"
         },
-        "options": [
-            "string",
-            "boolean",
-            "NaN",
-            "number"
-        ]
+        "options": ["string", "boolean", "NaN", "number"]
     },
     {
         "question": " 55. What is the output of below code?",
@@ -714,12 +597,7 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n1. The type of operator on new Number always returns object. i.e, typeof new Number(0) --> object. \n2. Objects are always truthy in if block\n\nHence the above code block always goes to if section.\n\n</p>\n\n"
         },
-        "options": [
-            "If",
-            "Else",
-            "NaN",
-            "SyntaxError"
-        ]
+        "options": ["If", "Else", "NaN", "SyntaxError"]
     },
     {
         "question": " 55. What is the output of below code in non strict mode?",
@@ -728,12 +606,7 @@
             "index": 4,
             "full": "\n<p>\n\n##### Answer: 4\nIt returns undefined for non-strict mode and returns Error for strict mode. In non-strict mode, the wrapper object is going to be created and get the mentioned property. But the object get disappeared after accessing the property in next line.\n</p>\n\n"
         },
-        "options": [
-            "\"\"",
-            "Error",
-            "John",
-            "Undefined"
-        ]
+        "options": ["\"\"", "Error", "John", "Undefined"]
     },
     {
         "question": " 56. What is the output of below code?",
@@ -742,11 +615,6 @@
             "index": 1,
             "full": "\n<p>\n\n##### Answer: 1\n11 and 10 is logged to the console. \n\nThe innerFunc is a closure which captures the count variable from the outerscope. i.e, 10. But the conditional has another local variable `count` which overwrites the ourter `count` variable. So the first console.log displays value 11.\nWhereas the second console.log logs 10 by capturing the count variable from outerscope.\n \n</p>\n\n"
         },
-        "options": [
-            "11, 10",
-            "11, 11",
-            "10, 11",
-            "10, 10"
-        ]
+        "options": ["11, 10", "11, 11", "10, 11", "10, 10"]
     }
 ]
